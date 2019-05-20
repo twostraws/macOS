@@ -122,7 +122,7 @@ class GameScene: SKScene {
 	}
 
 	func pop(_ node: SKSpriteNode) {
-		guard let index = bubbles.index(of: node) else { return }
+		guard let index = bubbles.firstIndex(of: node) else { return }
 		bubbles.remove(at: index)
 
 		node.physicsBody = nil
