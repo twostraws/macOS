@@ -38,9 +38,9 @@ struct ContentView: View {
                                 }
                                 .buttonStyle(BorderlessButtonStyle())
                             }
-                        }
+                        }.id(UUID())
                     }
-                }
+                }.id(UUID())
             }
             .opacity(isGameOver ? 0.2 : 1)
 
