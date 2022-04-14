@@ -17,8 +17,6 @@ struct ContentView: View {
         VStack(spacing: 0) {
             HStack {
                 TextField("Enter a guess…", text: $guess)
-                    .onSubmit(submitGuess)
-
                 Button("Go", action: submitGuess)
             }
             .padding()

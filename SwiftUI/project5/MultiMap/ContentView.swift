@@ -35,7 +35,7 @@ struct ContentView: View {
 
                     Button("Go", action: runSearch)
                 }
-                .padding(.horizontal)
+                .padding([.top, .horizontal])
 
                 Map(coordinateRegion: $region, annotationItems: locations) { location in
                     MapAnnotation(coordinate: location.coordinate) {
