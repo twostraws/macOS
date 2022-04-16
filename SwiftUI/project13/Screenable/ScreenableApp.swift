@@ -15,7 +15,7 @@ struct ScreenableApp: App {
         }
         .commands {
             CommandGroup(after: .saveItem) {
-                Button("Export") {
+                Button("Export…") {
                     NSApp.sendAction(#selector(AppCommands.export), to: nil, from: nil)
                 }
                 .keyboardShortcut("e")

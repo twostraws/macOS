@@ -17,6 +17,11 @@ struct ContentView: View {
     var body: some View {
         HStack(spacing: 20) {
             RenderView(document: document)
+                .onDrag {
+                    let url = FileManager.default.temporaryDirectory.appendingPathComponent("ScreenableExport").appendingPathExtension("png")
+                    try? RenderView(document: document).snapshot()?.write(to: url)
+                    return NSItemProvider(item: url as NSSecureCoding, typeIdentifier: UTType.fileURL.identifier)
+                }
                 .onDrop(of: [UTType.fileURL], isTargeted: nil, perform: handleDrop)
 
             VStack(spacing: 20) {
