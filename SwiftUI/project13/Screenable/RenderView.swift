@@ -10,16 +10,6 @@ import SwiftUI
 struct RenderView: View {
     let document: ScreenableDocument
 
-    @AppStorage("UseMarkdown") var useMarkdown = false
-
-    var formattedCaption: AttributedString {
-        if useMarkdown {
-            return (try? AttributedString(markdown: document.caption)) ?? ""
-        } else {
-            return AttributedString(document.caption)
-        }
-    }
-
     var body: some View {
         Canvas { context, size in
             // set up
@@ -81,7 +71,7 @@ struct RenderView: View {
             context.draw(Image("iPhone"), in: CGRect(origin: CGPoint(x: horizontalOffset, y: verticalOffset), size: phoneSize))
         } symbols: {
             // add custom SwiftUI views
-            Text(formattedCaption)
+            Text(document.caption)
                 .font(.custom(document.font, size: Double(document.fontSize)))
                 .foregroundColor(document.captionColor)
                 .multilineTextAlignment(.center)

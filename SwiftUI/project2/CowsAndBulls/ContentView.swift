@@ -13,22 +13,39 @@ struct ContentView: View {
     @State private var guesses = [String]()
     @State private var isGameOver = false
 
+    @AppStorage("maximumGuesses") var maximumGuesses = 100
+    @AppStorage("showGuessCount") var showGuessCount = false
+    @AppStorage("answerLength") var answerLength = 4
+    @AppStorage("enableHardMode") var enableHardMode = false
+
     var body: some View {
         VStack(spacing: 0) {
             HStack {
                 TextField("Enter a guess…", text: $guess)
+                    .onSubmit(submitGuess)
                 Button("Go", action: submitGuess)
             }
             .padding()
 
-            List(guesses, id: \.self) { guess in
+            List(0..<guesses.count, id: \.self) { index in
+                let guess = guesses[index]
+                let shouldShowResult = (enableHardMode == false) || (enableHardMode && index == 0)
+
                 HStack {
                     Text(guess)
                     Spacer()
-                    Text(result(for: guess))
+
+                    if shouldShowResult {
+                        Text(result(for: guess))
+                    }
                 }
             }
             .listStyle(.sidebar)
+
+            if showGuessCount {
+                Text("Guesses: \(guesses.count)/\(maximumGuesses)")
+                    .padding()
+            }
         }
         .navigationTitle("Cows and Bulls")
         .alert("You win!", isPresented: $isGameOver) {
@@ -38,7 +55,7 @@ struct ContentView: View {
         }
         .touchBar {
             HStack {
-                Text("Guesses: \(guesses.count)")
+                Text("Guesses: \(guesses.count)/\(maximumGuesses)")
                     .touchBarItemPrincipal()
                 Spacer(minLength: 200)
             }
@@ -46,11 +63,13 @@ struct ContentView: View {
         .frame(width: 250)
         .frame(minHeight: 300)
         .onAppear(perform: startNewGame)
+        .onChange(of: maximumGuesses) { _ in startNewGame() }
+        .onChange(of: answerLength) { _ in startNewGame() }
     }
 
     func submitGuess() {
-        guard Set(guess).count == 4 else { return }
-        guard guess.count == 4 else { return }
+        guard Set(guess).count == answerLength else { return }
+        guard guess.count == answerLength else { return }
 
         let badCharacters = CharacterSet(charactersIn: "0123456789").inverted
         guard guess.rangeOfCharacter(from: badCharacters) == nil else { return }
@@ -60,7 +79,7 @@ struct ContentView: View {
         }
 
         // did the player win?
-        if result(for: guess).contains("4b") {
+        if result(for: guess).contains("\(answerLength)b") {
             isGameOver = true
         }
 
@@ -88,13 +107,15 @@ struct ContentView: View {
 
 
     func startNewGame() {
+        guard answerLength >= 3 && answerLength <= 8 else { return }
+
         guess = ""
         guesses.removeAll()
         answer = ""
 
         let numbers = (0...9).shuffled()
 
-        for i in 0..<4 {
+        for i in 0..<answerLength {
             answer.append(String(numbers[i]))
         }
     }

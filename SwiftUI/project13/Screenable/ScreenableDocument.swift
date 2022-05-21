@@ -12,17 +12,17 @@ struct ScreenableDocument: FileDocument, Codable {
     static var readableContentTypes = [UTType(exportedAs: "com.hackingwithswift.screenable")]
 
     var caption = ""
-    var font = UserDefaults.standard.string(forKey: "Font") ?? "Helvetica Neue"
-    var fontSize = UserDefaults.standard.integer(forKey: "FontSize")
+    var font = "Helvetica Neue"
+    var fontSize = 12
 
     var captionColor = Color.black
     var backgroundColorTop = Color.clear
     var backgroundColorBottom = Color.clear
 
     var dropShadowLocation = 0
-    var dropShadowStrength = UserDefaults.standard.integer(forKey: "ShadowStrength")
+    var dropShadowStrength = 1
 
-    var backgroundImage = UserDefaults.standard.string(forKey: "BackgroundImage") ?? ""
+    var backgroundImage = ""
     var userImage: Data?
 
     init() {

@@ -13,5 +13,7 @@ struct CowsAndBullsApp: App {
         WindowGroup {
             ContentView()
         }
+
+        Settings(content: SettingsView.init)
     }
 }

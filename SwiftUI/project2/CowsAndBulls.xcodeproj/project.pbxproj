@@ -11,6 +11,8 @@
 		517EBA8527F507C7006872A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EBA8427F507C7006872A1 /* ContentView.swift */; };
 		517EBA8727F507C8006872A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517EBA8627F507C8006872A1 /* Assets.xcassets */; };
 		517EBA8A27F507C8006872A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517EBA8927F507C8006872A1 /* Preview Assets.xcassets */; };
+		51E76CD92836B7CF00D28A9C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E76CD82836B7CF00D28A9C /* SettingsView.swift */; };
+		51E76CDB2836F82B00D28A9C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 51E76CDA2836F82B00D28A9C /* Credits.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		517EBA8627F507C8006872A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		517EBA8927F507C8006872A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		517EBA8B27F507C8006872A1 /* CowsAndBulls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CowsAndBulls.entitlements; sourceTree = "<group>"; };
+		51E76CD82836B7CF00D28A9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		51E76CDA2836F82B00D28A9C /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				517EBA8227F507C7006872A1 /* CowsAndBullsApp.swift */,
 				517EBA8427F507C7006872A1 /* ContentView.swift */,
+				51E76CD82836B7CF00D28A9C /* SettingsView.swift */,
+				51E76CDA2836F82B00D28A9C /* Credits.rtf */,
 				517EBA8627F507C8006872A1 /* Assets.xcassets */,
 				517EBA8B27F507C8006872A1 /* CowsAndBulls.entitlements */,
 				517EBA8827F507C8006872A1 /* Preview Content */,
@@ -128,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				517EBA8A27F507C8006872A1 /* Preview Assets.xcassets in Resources */,
+				51E76CDB2836F82B00D28A9C /* Credits.rtf in Resources */,
 				517EBA8727F507C8006872A1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E76CD92836B7CF00D28A9C /* SettingsView.swift in Sources */,
 				517EBA8527F507C7006872A1 /* ContentView.swift in Sources */,
 				517EBA8327F507C7006872A1 /* CowsAndBullsApp.swift in Sources */,
 			);

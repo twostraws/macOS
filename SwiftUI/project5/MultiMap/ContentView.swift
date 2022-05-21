@@ -28,29 +28,21 @@ struct ContentView: View {
                      }
             }
 
-            VStack {
-                HStack {
-                    TextField("Search for something…", text: $searchText)
-                        .onSubmit(runSearch)
-
-                    Button("Go", action: runSearch)
-                }
-                .padding([.top, .horizontal])
-
-                Map(coordinateRegion: $region, annotationItems: locations) { location in
-                    MapAnnotation(coordinate: location.coordinate) {
-                        Text(location.name)
-                            .font(.headline)
-                            .padding(5)
-                            .padding(.horizontal, 5)
-                            .background(.black)
-                            .foregroundColor(.white)
-                            .clipShape(Capsule())
-                        
-                    }
+            Map(coordinateRegion: $region, annotationItems: locations) { location in
+                MapAnnotation(coordinate: location.coordinate) {
+                    Text(location.name)
+                        .font(.headline)
+                        .padding(5)
+                        .padding(.horizontal, 5)
+                        .background(.black)
+                        .foregroundColor(.white)
+                        .clipShape(Capsule())
                 }
             }
+            .ignoresSafeArea()
         }
+        .searchable(text: $searchText, placement: .sidebar)
+        .onSubmit(of: .search, runSearch)
         .onChange(of: selectedLocations) { _ in
             var visibleMap = MKMapRect.null
 

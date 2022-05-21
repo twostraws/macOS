@@ -21,16 +21,5 @@ struct ScreenableApp: App {
                 .keyboardShortcut("e")
             }
         }
-
-        Settings(content: SettingsView.init)
-    }
-
-    init() {
-        let dict = [
-            "FontSize": 12,
-            "ShadowStrength": 1
-        ]
-
-        UserDefaults.standard.register(defaults: dict)
     }
 }

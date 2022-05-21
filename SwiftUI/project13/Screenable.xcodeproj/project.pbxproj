@@ -19,8 +19,6 @@
 		51F60B8928087B05007647DC /* Color-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B8828087B05007647DC /* Color-Codable.swift */; };
 		51F60B8B28088214007647DC /* View-Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B8A28088214007647DC /* View-Snapshot.swift */; };
 		51F60B8D280882CF007647DC /* AppCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B8C280882CF007647DC /* AppCommands.swift */; };
-		51F60B8F280883A0007647DC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 51F60B8E280883A0007647DC /* Credits.rtf */; };
-		51F60B9128088401007647DC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B9028088401007647DC /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,8 +37,6 @@
 		51F60B8828087B05007647DC /* Color-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Codable.swift"; sourceTree = "<group>"; };
 		51F60B8A28088214007647DC /* View-Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Snapshot.swift"; sourceTree = "<group>"; };
 		51F60B8C280882CF007647DC /* AppCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommands.swift; sourceTree = "<group>"; };
-		51F60B8E280883A0007647DC /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		51F60B9028088401007647DC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +73,11 @@
 				51F60B6E28085E7C007647DC /* ScreenableApp.swift */,
 				51F60B7028085E7C007647DC /* ContentView.swift */,
 				51F60B84280875F6007647DC /* RenderView.swift */,
-				51F60B9028088401007647DC /* SettingsView.swift */,
 				51F60B8128087173007647DC /* ScreenableDocument.swift */,
 				51F60B8828087B05007647DC /* Color-Codable.swift */,
 				51F60B86280877B6007647DC /* Bundle-StringArray.swift */,
 				51F60B8A28088214007647DC /* View-Snapshot.swift */,
 				51F60B8C280882CF007647DC /* AppCommands.swift */,
-				51F60B8E280883A0007647DC /* Credits.rtf */,
 				51F60B7D28086754007647DC /* Backgrounds.txt */,
 				51F60B7E28086754007647DC /* Fonts.txt */,
 				51F60B7228085E7D007647DC /* Assets.xcassets */,
@@ -159,7 +153,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51F60B8F280883A0007647DC /* Credits.rtf in Resources */,
 				51F60B7F28086754007647DC /* Backgrounds.txt in Resources */,
 				51F60B8028086754007647DC /* Fonts.txt in Resources */,
 				51F60B7628085E7D007647DC /* Preview Assets.xcassets in Resources */,
@@ -177,7 +170,6 @@
 				51F60B8228087173007647DC /* ScreenableDocument.swift in Sources */,
 				51F60B7128085E7C007647DC /* ContentView.swift in Sources */,
 				51F60B8928087B05007647DC /* Color-Codable.swift in Sources */,
-				51F60B9128088401007647DC /* SettingsView.swift in Sources */,
 				51F60B8B28088214007647DC /* View-Snapshot.swift in Sources */,
 				51F60B87280877B6007647DC /* Bundle-StringArray.swift in Sources */,
 				51F60B85280875F6007647DC /* RenderView.swift in Sources */,
