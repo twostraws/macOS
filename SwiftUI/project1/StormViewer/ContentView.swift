@@ -11,12 +11,12 @@ struct ContentView: View {
     @State private var selectedImage: Int?
 
     var body: some View {
-        NavigationView {
+        NavigationSplitView {
             List(0..<10, selection: $selectedImage) { number in
                 Text("Storm \(number + 1)")
             }
             .frame(width: 150)
-
+        } detail: {
             if let selectedImage = selectedImage {
                 Image(String(selectedImage))
                     .resizable()
@@ -26,7 +26,6 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
-        .navigationTitle("Storm Viewer")
         .frame(minWidth: 480, minHeight: 320)
     }
 }

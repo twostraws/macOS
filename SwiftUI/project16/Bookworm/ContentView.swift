@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var dataController: DataController
+    
     var body: some View {
-        NavigationView {
+        NavigationSplitView {
             ListingView()
                 .frame(minWidth: 250)
-
-            Text("Please select a review")
+        } detail: {
+            if let selectedReview = dataController.selectedReview {
+                DetailView(review: selectedReview)
+            } else {
+                Text("Please select a review")
+            }
         }
     }
 }

@@ -12,22 +12,16 @@ struct ListingView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.id)]) var reviews: FetchedResults<Review>
-    
-    @State private var selectedReview: Review?
     @AppStorage("id") var id = 1
 
     var body: some View {
-        List(reviews) { review in
-            NavigationLink(tag: review, selection: $selectedReview) {
-                DetailView(review: review)
-            } label: {
-                Text(review.reviewTitle)
-            }
-            .contextMenu {
-                Button("Delete", role: .destructive, action: deleteSelected)
-            }
+        List(reviews, selection: $dataController.selectedReview) { review in
+            Text(review.reviewTitle)
+                .tag(review)
+                .contextMenu {
+                    Button("Delete", role: .destructive, action: deleteSelected)
+                }
         }
-        .onDeleteCommand(perform: deleteSelected)
         .toolbar {
             Button(action: addReview) {
                 Label("Add Review", systemImage: "plus")
@@ -36,8 +30,9 @@ struct ListingView: View {
             Button(action: deleteSelected) {
                 Label("Delete", systemImage: "trash")
             }
-            .disabled(selectedReview == nil)
+            .disabled(dataController.selectedReview == nil)
         }
+        .onDeleteCommand(perform: deleteSelected)
     }
 
     func addReview() {
@@ -50,28 +45,28 @@ struct ListingView: View {
         id += 1
 
         dataController.save()
-        selectedReview = review
+        dataController.selectedReview = review
     }
 
     func deleteSelected() {
-        guard let selected = selectedReview else {
+        guard let selectedReview = dataController.selectedReview else {
             return
         }
 
-        guard let selectedIndex = reviews.firstIndex(of: selected) else {
+        guard let selectedIndex = reviews.firstIndex(of: selectedReview) else {
             return
         }
 
-        managedObjectContext.delete(selected)
+        managedObjectContext.delete(selectedReview)
         dataController.save()
 
         if selectedIndex < reviews.count {
-            selectedReview = reviews[selectedIndex]
+            dataController.selectedReview = reviews[selectedIndex]
         } else {
             let previousIndex = selectedIndex - 1
 
             if previousIndex >= 0 {
-                selectedReview = reviews[previousIndex]
+                dataController.selectedReview = reviews[previousIndex]
             }
         }
     }

@@ -14,5 +14,6 @@ struct OddOneOutApp: App {
             ContentView()
         }
         .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
     }
 }

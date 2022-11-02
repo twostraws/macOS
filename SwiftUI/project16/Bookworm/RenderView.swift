@@ -30,7 +30,7 @@ struct RenderView: View {
 
             ScrollView {
                 Text(review.reviewText)
-                    .font(.system(.body, design: .serif))
+                    .fontDesign(.serif)
                     .padding(.vertical)
             }
 

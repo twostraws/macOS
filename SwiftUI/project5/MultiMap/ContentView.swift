@@ -17,7 +17,7 @@ struct ContentView: View {
     @AppStorage("searchText") private var searchText = ""
 
     var body: some View {
-        NavigationView {
+        NavigationSplitView {
             List(locations, selection: $selectedLocations) { location in
                 Text(location.name)
                     .tag(location)
@@ -25,9 +25,10 @@ struct ContentView: View {
                         Button("Delete", role: .destructive) {
                             delete(location)
                         }
-                     }
+                    }
             }
-
+            .frame(minWidth: 200)
+        } detail: {
             Map(coordinateRegion: $region, annotationItems: locations) { location in
                 MapAnnotation(coordinate: location.coordinate) {
                     Text(location.name)

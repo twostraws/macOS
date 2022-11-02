@@ -17,7 +17,6 @@
 		51F60B85280875F6007647DC /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B84280875F6007647DC /* RenderView.swift */; };
 		51F60B87280877B6007647DC /* Bundle-StringArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B86280877B6007647DC /* Bundle-StringArray.swift */; };
 		51F60B8928087B05007647DC /* Color-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B8828087B05007647DC /* Color-Codable.swift */; };
-		51F60B8B28088214007647DC /* View-Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B8A28088214007647DC /* View-Snapshot.swift */; };
 		51F60B8D280882CF007647DC /* AppCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60B8C280882CF007647DC /* AppCommands.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		51F60B84280875F6007647DC /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
 		51F60B86280877B6007647DC /* Bundle-StringArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-StringArray.swift"; sourceTree = "<group>"; };
 		51F60B8828087B05007647DC /* Color-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Codable.swift"; sourceTree = "<group>"; };
-		51F60B8A28088214007647DC /* View-Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Snapshot.swift"; sourceTree = "<group>"; };
 		51F60B8C280882CF007647DC /* AppCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommands.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +74,6 @@
 				51F60B8128087173007647DC /* ScreenableDocument.swift */,
 				51F60B8828087B05007647DC /* Color-Codable.swift */,
 				51F60B86280877B6007647DC /* Bundle-StringArray.swift */,
-				51F60B8A28088214007647DC /* View-Snapshot.swift */,
 				51F60B8C280882CF007647DC /* AppCommands.swift */,
 				51F60B7D28086754007647DC /* Backgrounds.txt */,
 				51F60B7E28086754007647DC /* Fonts.txt */,
@@ -123,7 +120,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					51F60B6A28085E7C007647DC = {
 						CreatedOnToolsVersion = 13.3;
@@ -170,7 +167,6 @@
 				51F60B8228087173007647DC /* ScreenableDocument.swift in Sources */,
 				51F60B7128085E7C007647DC /* ContentView.swift in Sources */,
 				51F60B8928087B05007647DC /* Color-Codable.swift in Sources */,
-				51F60B8B28088214007647DC /* View-Snapshot.swift in Sources */,
 				51F60B87280877B6007647DC /* Bundle-StringArray.swift in Sources */,
 				51F60B85280875F6007647DC /* RenderView.swift in Sources */,
 				51F60B6F28085E7C007647DC /* ScreenableApp.swift in Sources */,
@@ -214,6 +210,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -231,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,6 +271,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -285,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -300,9 +298,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Screenable/Screenable.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Screenable/Preview Content\"";
 				DEVELOPMENT_TEAM = B5C26XE59E;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -314,6 +314,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Screenable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -328,9 +329,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Screenable/Screenable.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Screenable/Preview Content\"";
 				DEVELOPMENT_TEAM = B5C26XE59E;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -342,6 +345,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Screenable;
 				PRODUCT_NAME = "$(TARGET_NAME)";

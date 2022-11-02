@@ -10,6 +10,8 @@ import CoreData
 class DataController: ObservableObject {
     let container = NSPersistentContainer(name: "Bookworm")
     var saveTask: Task<Void, Error>?
+    
+    @Published var selectedReview: Review?
 
     init() {
         container.loadPersistentStores { description, error in
@@ -28,7 +30,7 @@ class DataController: ObservableObject {
         saveTask?.cancel()
 
         saveTask = Task { @MainActor in
-            try await Task.sleep(nanoseconds: 5_000_000_000)
+            try await Task.sleep(for: .seconds(5))
             save()
         }
     }

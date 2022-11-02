@@ -13,6 +13,7 @@ struct ScreenableApp: App {
         DocumentGroup(newDocument: ScreenableDocument()) { file in
             ContentView(document: file.$document)
         }
+        .windowResizability(.contentSize)
         .commands {
             CommandGroup(after: .saveItem) {
                 Button("Export…") {

@@ -8,11 +8,9 @@
 import SwiftUI
 
 @main
-struct StormViewerApp: App {
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
+struct StormViewerApp: App {    
     var body: some Scene {
-        WindowGroup {
+        Window("Storm Viewer", id: "main") {
             ContentView()
                 .onAppear {
                      NSWindow.allowsAutomaticWindowTabbing = false

@@ -74,9 +74,7 @@ struct ContentView: View {
         let badCharacters = CharacterSet(charactersIn: "0123456789").inverted
         guard guess.rangeOfCharacter(from: badCharacters) == nil else { return }
 
-        withAnimation {
-            guesses.insert(guess, at: 0)
-        }
+        guesses.insert(guess, at: 0)
 
         // did the player win?
         if result(for: guess).contains("\(answerLength)b") {

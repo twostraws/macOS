@@ -8,7 +8,7 @@
 import SwiftUI
 import UniformTypeIdentifiers
 
-struct ContentView: View {
+@MainActor struct ContentView: View {
     @Binding var document: ScreenableDocument
 
     let fonts = Bundle.main.loadStringArray(from: "Fonts.txt")
@@ -18,11 +18,11 @@ struct ContentView: View {
         HStack(spacing: 20) {
             RenderView(document: document)
                 .onDrag {
-                    let url = FileManager.default.temporaryDirectory.appendingPathComponent("ScreenableExport").appendingPathExtension("png")
-                    try? RenderView(document: document).snapshot()?.write(to: url)
-                    return NSItemProvider(item: url as NSSecureCoding, typeIdentifier: UTType.fileURL.identifier)
+                    NSItemProvider(item: snapshotToURL() as NSSecureCoding, typeIdentifier: UTType.fileURL.identifier)
                 }
-                .onDrop(of: [UTType.fileURL], isTargeted: nil, perform: handleDrop)
+                .dropDestination(for: URL.self) { items, location in
+                    handleDrop(of: items)
+                }
 
             VStack(spacing: 20) {
                 VStack(alignment: .leading) {
@@ -95,38 +95,27 @@ struct ContentView: View {
         }
         .padding()
         .toolbar {
-            Button("Export", action: export)
+            Button("Export") { export() }
+            ShareLink(item: snapshotToURL())
         }
-        .onCommand(#selector(AppCommands.export), perform: export)
+        .onCommand(#selector(AppCommands.export)) { export() }
     }
 
-    // 1. We accept an array of NSItemProviders that might contain file URLs
-    func handleDrop(providers: [NSItemProvider]) -> Bool {
-        // 2. We only care about the first item; bail out if we can't read that
-        guard let item = providers.first else { return false }
-
-        // 3. Load the first item
-        item.loadItem(forTypeIdentifier: UTType.fileURL.identifier, options: nil) { data, error in
-            // 4. if it succeeds, convert the data into a URL
-            if let data = data as? Data {
-                guard let url = URL(dataRepresentation: data, relativeTo: nil) else { return }
-
-                // 5. Load the URL into a Data object
-                let loadedImage = try? Data(contentsOf: url)
-
-                // 6. Copy the data into our userImage property
-                Task { @MainActor in
-                    document.userImage = loadedImage
-                }
-            }
-        }
-
-        // 7. Signal that the drop was received successfully
+    func snapshotToURL() -> URL {
+        let url = URL.temporaryDirectory.appending(path: "ScreenableExport").appendingPathExtension("png")
+        try? createSnapshot()?.write(to: url)
+        return url
+    }
+    
+    func handleDrop(of urls: [URL]) -> Bool {
+        guard let url = urls.first else { return false }
+        let loadedImage = try? Data(contentsOf: url)
+        document.userImage = loadedImage
         return true
     }
 
     func export() {
-        guard let png = RenderView(document: document).snapshot() else { return }
+        guard let png = createSnapshot() else { return }
 
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.png]
@@ -141,6 +130,17 @@ struct ContentView: View {
                     print (error.localizedDescription)
                 }
             }
+        }
+    }
+    
+    func createSnapshot() -> Data? {
+        let renderer = ImageRenderer(content: RenderView(document: document))
+ 
+        if let tiff = renderer.nsImage?.tiffRepresentation {
+            let bitmap = NSBitmapImageRep(data: tiff)
+            return bitmap?.representation(using: .png, properties: [:])
+        } else {
+            return nil
         }
     }
 }
