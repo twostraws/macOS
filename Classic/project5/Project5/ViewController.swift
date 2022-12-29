@@ -61,16 +61,16 @@ class ViewController: NSViewController, MKMapViewDelegate {
 		guard let pin = annotation as? Pin else { return nil }
 		let identifier = "Guess"
 
-		var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView
+		var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
 
 		if annotationView == nil {
-			annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+			annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
 		} else {
 			annotationView!.annotation = annotation
 		}
 
 		annotationView?.canShowCallout = true
-		annotationView?.pinTintColor = pin.color
+        annotationView?.markerTintColor = pin.color
 
 		return annotationView
 	}

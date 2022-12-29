@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import UniformTypeIdentifiers
 
 class ViewController: NSViewController, NSTextViewDelegate {
 	@IBOutlet var imageView: NSImageView!
@@ -95,7 +96,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
 
 	@objc func importScreenshot() {
 		let panel = NSOpenPanel()
-		panel.allowedFileTypes = ["jpg", "png"]
+        panel.allowedContentTypes = [.jpeg, .png]
 
 		panel.begin { [unowned self] result in
 			if result == .OK {
@@ -286,7 +287,7 @@ class ViewController: NSViewController, NSTextViewDelegate {
 		guard let png = imageRep.representation(using: .png, properties: [:]) else { return }
 
 		let panel = NSSavePanel()
-		panel.allowedFileTypes = ["png"]
+        panel.allowedContentTypes = [.png]
 
 		panel.begin { result in
 			if result == .OK {

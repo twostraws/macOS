@@ -31,7 +31,7 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		collectionView.registerForDraggedTypes([NSPasteboard.PasteboardType(kUTTypeURL as String)])
+        collectionView.registerForDraggedTypes([NSPasteboard.PasteboardType.URL])
 
 		do {
 			let fm = FileManager.default
@@ -123,7 +123,7 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
 		let fm = FileManager.default
 
 		for item in items {
-			guard let stringURL = item.string(forType: NSPasteboard.PasteboardType(kUTTypeFileURL as String)) else { continue }
+            guard let stringURL = item.string(forType: NSPasteboard.PasteboardType.fileURL) else { continue }
 			guard let sourceURL = URL(string: stringURL) else { continue }
 			let destinationURL = photosDirectory.appendingPathComponent(sourceURL.lastPathComponent)
 
@@ -219,7 +219,7 @@ class ViewController: NSViewController, NSCollectionViewDataSource, NSCollection
 		let mutableCompositionVideoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
 		let trackURL = Bundle.main.url(forResource: "black", withExtension:"mp4")!
 		let asset = AVAsset(url: trackURL)
-		let track = asset.tracks[0]
+        let track = asset.tracks[0]
         try! mutableCompositionVideoTrack?.insertTimeRange(timeRange, of: track, at: .zero)
 
 		return videoLayer
