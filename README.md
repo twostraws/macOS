@@ -2,7 +2,7 @@
 
 This is the source code to accompany **Hacking with macOS**, [a complete tutorial course teaching macOS development using Swift and SwiftUI](https://www.hackingwithswift.com/store/hacking-with-macos).
 
-All the projects from the new edition should be compatible with Xcode 14.1 and macOS Ventura. All the projects from the older AppKit edition should be compatible with Xcode 11 and macOS Catalina.
+All the projects from the new edition should be compatible with Xcode 14.2 and macOS Ventura. All the projects from the older AppKit edition should be compatible with macOS Monterey, but with small changes should work back to Catalina.
 
 Where appropriate, separate project files have been provided so that you can follow the tutorial from scratch without having to dig around in the completed project folder.
 
