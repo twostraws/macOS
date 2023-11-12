@@ -23,7 +23,7 @@ struct ContentView: View {
                 Button(action: quit) {
                     Label("Quit", systemImage: "xmark.circle.fill")
                 }
-                .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
             }
             .buttonStyle(.borderless)
             

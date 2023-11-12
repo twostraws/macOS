@@ -54,11 +54,11 @@ struct ContentView: View {
                         createLevel()
                     }
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .buttonStyle(.borderless)
                     .padding(20)
                     .background(.blue)
-                    .clipShape(Capsule())
+                    .clipShape(.capsule)
                 }
             }
 

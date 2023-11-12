@@ -24,7 +24,7 @@ struct SettingsView: View {
 
                 if answerLength < 3 || answerLength > 8 {
                     Text("Must be between 3 and 8")
-                        .foregroundColor(.red)
+                        .foregroundStyle(.red)
                 }
             }
             .padding()

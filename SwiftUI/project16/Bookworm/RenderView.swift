@@ -24,7 +24,7 @@ struct RenderView: View {
             HStack {
                 ForEach(1..<6) { number in
                     Image(systemName: "star.fill")
-                        .foregroundColor(number > review.rating ? .gray : .yellow)
+                        .foregroundStyle(number > review.rating ? .gray : .yellow)
                 }
             }
 

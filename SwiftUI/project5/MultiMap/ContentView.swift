@@ -36,8 +36,8 @@ struct ContentView: View {
                         .padding(5)
                         .padding(.horizontal, 5)
                         .background(.black)
-                        .foregroundColor(.white)
-                        .clipShape(Capsule())
+                        .foregroundStyle(.white)
+                        .clipShape(.capsule)
                 }
             }
             .ignoresSafeArea()

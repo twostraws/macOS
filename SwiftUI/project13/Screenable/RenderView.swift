@@ -73,7 +73,7 @@ struct RenderView: View {
             // add custom SwiftUI views
             Text(document.caption)
                 .font(.custom(document.font, size: Double(document.fontSize)))
-                .foregroundColor(document.captionColor)
+                .foregroundStyle(document.captionColor)
                 .multilineTextAlignment(.center)
                 .shadow(color: document.dropShadowLocation == 1 || document.dropShadowLocation == 3 ? .black : .clear, radius: Double(document.dropShadowStrength))
                 .shadow(color: document.dropShadowLocation == 1 || document.dropShadowLocation == 3 ? .black : .clear, radius: Double(document.dropShadowStrength))
