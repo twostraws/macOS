@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38D095CF298E335D00BE2A79 /* Track+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D095CE298E335D00BE2A79 /* Track+Preview.swift */; };
 		51F60ABC2808457D007647DC /* FastTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60ABB2808457D007647DC /* FastTrackApp.swift */; };
 		51F60ABE2808457D007647DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F60ABD2808457D007647DC /* ContentView.swift */; };
 		51F60AC02808457F007647DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F60ABF2808457F007647DC /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38D095CE298E335D00BE2A79 /* Track+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Track+Preview.swift"; sourceTree = "<group>"; };
 		51F60AB82808457D007647DC /* FastTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F60ABB2808457D007647DC /* FastTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastTrackApp.swift; sourceTree = "<group>"; };
 		51F60ABD2808457D007647DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		51F60AC12808457F007647DC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				38D095CE298E335D00BE2A79 /* Track+Preview.swift */,
 				51F60AC22808457F007647DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -147,6 +150,7 @@
 			files = (
 				51F60ABE2808457D007647DC /* ContentView.swift in Sources */,
 				51F60ABC2808457D007647DC /* FastTrackApp.swift in Sources */,
+				38D095CF298E335D00BE2A79 /* Track+Preview.swift in Sources */,
 				51F60ACD28084731007647DC /* TrackView.swift in Sources */,
 				51F60ACB28084607007647DC /* Track.swift in Sources */,
 			);

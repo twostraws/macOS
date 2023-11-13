@@ -58,9 +58,8 @@ struct TrackView: View {
 }
 
 struct TrackView_Previews: PreviewProvider {
-    static var previews: some View {
-        TrackView(track: Track(trackId: 1, artistName: "Nirvana", trackName: "Smells Like Teen Spirit", previewUrl: URL(string: "abc")!, artworkUrl100: "https://bit.ly/teen-spirit")) { track in
-
-        }
-    }
+	static var previews: some View {
+		TrackView(track: Track.track1) { track in
+		}
+	}
 }
