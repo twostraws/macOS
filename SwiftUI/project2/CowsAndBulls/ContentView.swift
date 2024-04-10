@@ -63,8 +63,8 @@ struct ContentView: View {
         .frame(width: 250)
         .frame(minHeight: 300)
         .onAppear(perform: startNewGame)
-        .onChange(of: maximumGuesses) { _ in startNewGame() }
-        .onChange(of: answerLength) { _ in startNewGame() }
+        .onChange(of: maximumGuesses, startNewGame)
+        .onChange(of: answerLength, startNewGame)
     }
 
     func submitGuess() {
@@ -119,8 +119,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

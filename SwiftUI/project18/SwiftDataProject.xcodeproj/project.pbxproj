@@ -3,31 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		517EBA8327F507C7006872A1 /* CowsAndBullsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EBA8227F507C7006872A1 /* CowsAndBullsApp.swift */; };
-		517EBA8527F507C7006872A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517EBA8427F507C7006872A1 /* ContentView.swift */; };
-		517EBA8727F507C8006872A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517EBA8627F507C8006872A1 /* Assets.xcassets */; };
-		517EBA8A27F507C8006872A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517EBA8927F507C8006872A1 /* Preview Assets.xcassets */; };
-		51E76CD92836B7CF00D28A9C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E76CD82836B7CF00D28A9C /* SettingsView.swift */; };
-		51E76CDB2836F82B00D28A9C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 51E76CDA2836F82B00D28A9C /* Credits.rtf */; };
+		51D728FC2BC6B04200093A8C /* SwiftDataProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D728FB2BC6B04200093A8C /* SwiftDataProjectApp.swift */; };
+		51D728FE2BC6B04200093A8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D728FD2BC6B04200093A8C /* ContentView.swift */; };
+		51D729002BC6B04300093A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D728FF2BC6B04300093A8C /* Assets.xcassets */; };
+		51D729032BC6B04300093A8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51D729022BC6B04300093A8C /* Preview Assets.xcassets */; };
+		51D7290B2BC6B05700093A8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D7290A2BC6B05700093A8C /* User.swift */; };
+		51D7290F2BC6B08800093A8C /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D7290E2BC6B08800093A8C /* EditUserView.swift */; };
+		51D729112BC6B6C700093A8C /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D729102BC6B6C700093A8C /* UsersView.swift */; };
+		51D729132BC722CD00093A8C /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D729122BC722CD00093A8C /* Job.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		517EBA7F27F507C7006872A1 /* CowsAndBulls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CowsAndBulls.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		517EBA8227F507C7006872A1 /* CowsAndBullsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CowsAndBullsApp.swift; sourceTree = "<group>"; };
-		517EBA8427F507C7006872A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		517EBA8627F507C8006872A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		517EBA8927F507C8006872A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		517EBA8B27F507C8006872A1 /* CowsAndBulls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CowsAndBulls.entitlements; sourceTree = "<group>"; };
-		51E76CD82836B7CF00D28A9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		51E76CDA2836F82B00D28A9C /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		51D728F82BC6B04200093A8C /* SwiftDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D728FB2BC6B04200093A8C /* SwiftDataProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataProjectApp.swift; sourceTree = "<group>"; };
+		51D728FD2BC6B04200093A8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		51D728FF2BC6B04300093A8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		51D729022BC6B04300093A8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		51D729042BC6B04300093A8C /* SwiftDataProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDataProject.entitlements; sourceTree = "<group>"; };
+		51D7290A2BC6B05700093A8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		51D7290E2BC6B08800093A8C /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
+		51D729102BC6B6C700093A8C /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		51D729122BC722CD00093A8C /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		517EBA7C27F507C7006872A1 /* Frameworks */ = {
+		51D728F52BC6B04200093A8C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +41,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		517EBA7627F507C7006872A1 = {
+		51D728EF2BC6B04200093A8C = {
 			isa = PBXGroup;
 			children = (
-				517EBA8127F507C7006872A1 /* CowsAndBulls */,
-				517EBA8027F507C7006872A1 /* Products */,
+				51D728FA2BC6B04200093A8C /* SwiftDataProject */,
+				51D728F92BC6B04200093A8C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		517EBA8027F507C7006872A1 /* Products */ = {
+		51D728F92BC6B04200093A8C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				517EBA7F27F507C7006872A1 /* CowsAndBulls.app */,
+				51D728F82BC6B04200093A8C /* SwiftDataProject.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		517EBA8127F507C7006872A1 /* CowsAndBulls */ = {
+		51D728FA2BC6B04200093A8C /* SwiftDataProject */ = {
 			isa = PBXGroup;
 			children = (
-				517EBA8227F507C7006872A1 /* CowsAndBullsApp.swift */,
-				517EBA8427F507C7006872A1 /* ContentView.swift */,
-				51E76CD82836B7CF00D28A9C /* SettingsView.swift */,
-				51E76CDA2836F82B00D28A9C /* Credits.rtf */,
-				517EBA8627F507C8006872A1 /* Assets.xcassets */,
-				517EBA8B27F507C8006872A1 /* CowsAndBulls.entitlements */,
-				517EBA8827F507C8006872A1 /* Preview Content */,
+				51D728FB2BC6B04200093A8C /* SwiftDataProjectApp.swift */,
+				51D7290E2BC6B08800093A8C /* EditUserView.swift */,
+				51D728FD2BC6B04200093A8C /* ContentView.swift */,
+				51D729122BC722CD00093A8C /* Job.swift */,
+				51D729102BC6B6C700093A8C /* UsersView.swift */,
+				51D7290A2BC6B05700093A8C /* User.swift */,
+				51D728FF2BC6B04300093A8C /* Assets.xcassets */,
+				51D729042BC6B04300093A8C /* SwiftDataProject.entitlements */,
+				51D729012BC6B04300093A8C /* Preview Content */,
 			);
-			path = CowsAndBulls;
+			path = SwiftDataProject;
 			sourceTree = "<group>";
 		};
-		517EBA8827F507C8006872A1 /* Preview Content */ = {
+		51D729012BC6B04300093A8C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				517EBA8927F507C8006872A1 /* Preview Assets.xcassets */,
+				51D729022BC6B04300093A8C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -78,91 +84,93 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		517EBA7E27F507C7006872A1 /* CowsAndBulls */ = {
+		51D728F72BC6B04200093A8C /* SwiftDataProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 517EBA8E27F507C8006872A1 /* Build configuration list for PBXNativeTarget "CowsAndBulls" */;
+			buildConfigurationList = 51D729072BC6B04300093A8C /* Build configuration list for PBXNativeTarget "SwiftDataProject" */;
 			buildPhases = (
-				517EBA7B27F507C7006872A1 /* Sources */,
-				517EBA7C27F507C7006872A1 /* Frameworks */,
-				517EBA7D27F507C7006872A1 /* Resources */,
+				51D728F42BC6B04200093A8C /* Sources */,
+				51D728F52BC6B04200093A8C /* Frameworks */,
+				51D728F62BC6B04200093A8C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CowsAndBulls;
-			productName = CowsAndBulls;
-			productReference = 517EBA7F27F507C7006872A1 /* CowsAndBulls.app */;
+			name = SwiftDataProject;
+			productName = SwiftDataProject;
+			productReference = 51D728F82BC6B04200093A8C /* SwiftDataProject.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		517EBA7727F507C7006872A1 /* Project object */ = {
+		51D728F02BC6B04200093A8C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					517EBA7E27F507C7006872A1 = {
-						CreatedOnToolsVersion = 13.3;
+					51D728F72BC6B04200093A8C = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
-			buildConfigurationList = 517EBA7A27F507C7006872A1 /* Build configuration list for PBXProject "CowsAndBulls" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 51D728F32BC6B04200093A8C /* Build configuration list for PBXProject "SwiftDataProject" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 517EBA7627F507C7006872A1;
-			productRefGroup = 517EBA8027F507C7006872A1 /* Products */;
+			mainGroup = 51D728EF2BC6B04200093A8C;
+			productRefGroup = 51D728F92BC6B04200093A8C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				517EBA7E27F507C7006872A1 /* CowsAndBulls */,
+				51D728F72BC6B04200093A8C /* SwiftDataProject */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		517EBA7D27F507C7006872A1 /* Resources */ = {
+		51D728F62BC6B04200093A8C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				517EBA8A27F507C8006872A1 /* Preview Assets.xcassets in Resources */,
-				51E76CDB2836F82B00D28A9C /* Credits.rtf in Resources */,
-				517EBA8727F507C8006872A1 /* Assets.xcassets in Resources */,
+				51D729032BC6B04300093A8C /* Preview Assets.xcassets in Resources */,
+				51D729002BC6B04300093A8C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		517EBA7B27F507C7006872A1 /* Sources */ = {
+		51D728F42BC6B04200093A8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51E76CD92836B7CF00D28A9C /* SettingsView.swift in Sources */,
-				517EBA8527F507C7006872A1 /* ContentView.swift in Sources */,
-				517EBA8327F507C7006872A1 /* CowsAndBullsApp.swift in Sources */,
+				51D729112BC6B6C700093A8C /* UsersView.swift in Sources */,
+				51D729132BC722CD00093A8C /* Job.swift in Sources */,
+				51D728FE2BC6B04200093A8C /* ContentView.swift in Sources */,
+				51D7290F2BC6B08800093A8C /* EditUserView.swift in Sources */,
+				51D728FC2BC6B04200093A8C /* SwiftDataProjectApp.swift in Sources */,
+				51D7290B2BC6B05700093A8C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		517EBA8C27F507C8006872A1 /* Debug */ = {
+		51D729052BC6B04300093A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -189,12 +197,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -208,24 +215,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		517EBA8D27F507C8006872A1 /* Release */ = {
+		51D729062BC6B04300093A8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -252,12 +260,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -265,27 +272,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		517EBA8F27F507C8006872A1 /* Debug */ = {
+		51D729082BC6B04300093A8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CowsAndBulls/CowsAndBulls.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = SwiftDataProject/SwiftDataProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"CowsAndBulls/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
 				DEVELOPMENT_TEAM = B5C26XE59E;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -295,27 +300,24 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.CowsAndBulls;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.hudson.SwiftDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		517EBA9027F507C8006872A1 /* Release */ = {
+		51D729092BC6B04300093A8C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = CowsAndBulls/CowsAndBulls.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = SwiftDataProject/SwiftDataProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"CowsAndBulls/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftDataProject/Preview Content\"";
 				DEVELOPMENT_TEAM = B5C26XE59E;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -325,9 +327,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.CowsAndBulls;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.hudson.SwiftDataProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -337,25 +338,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		517EBA7A27F507C7006872A1 /* Build configuration list for PBXProject "CowsAndBulls" */ = {
+		51D728F32BC6B04200093A8C /* Build configuration list for PBXProject "SwiftDataProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				517EBA8C27F507C8006872A1 /* Debug */,
-				517EBA8D27F507C8006872A1 /* Release */,
+				51D729052BC6B04300093A8C /* Debug */,
+				51D729062BC6B04300093A8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		517EBA8E27F507C8006872A1 /* Build configuration list for PBXNativeTarget "CowsAndBulls" */ = {
+		51D729072BC6B04300093A8C /* Build configuration list for PBXNativeTarget "SwiftDataProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				517EBA8F27F507C8006872A1 /* Debug */,
-				517EBA9027F507C8006872A1 /* Release */,
+				51D729082BC6B04300093A8C /* Debug */,
+				51D729092BC6B04300093A8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 517EBA7727F507C7006872A1 /* Project object */;
+	rootObject = 51D728F02BC6B04200093A8C /* Project object */;
 }

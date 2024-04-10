@@ -10,10 +10,8 @@ import SwiftUI
 @main
 struct TimeBuddyApp: App {
     var body: some Scene {
-        MenuBarExtra {
+        MenuBarExtra("Time Buddy", systemImage: "person.badge.clock.fill") {
             ContentView()
-        } label: {
-            Label("Time Buddy", systemImage: "person.badge.clock.fill")
         }
         .menuBarExtraStyle(.window)
     }

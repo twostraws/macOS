@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var dataController: DataController
-    
+    @State private var selectedReview: Review?
+
     var body: some View {
         NavigationSplitView {
-            ListingView()
+            ListingView(selectedReview: $selectedReview)
                 .frame(minWidth: 250)
         } detail: {
-            if let selectedReview = dataController.selectedReview {
+            if let selectedReview {
                 DetailView(review: selectedReview)
             } else {
                 Text("Please select a review")
@@ -24,8 +24,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

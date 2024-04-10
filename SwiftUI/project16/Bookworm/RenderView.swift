@@ -5,6 +5,7 @@
 //  Created by Paul Hudson on 21/05/2022.
 //
 
+import SwiftData
 import SwiftUI
 
 struct RenderView: View {
@@ -14,10 +15,10 @@ struct RenderView: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            Text(review.reviewTitle)
+            Text(review.title)
                 .font(.system(.largeTitle, design: .serif))
 
-            Text("by \(review.reviewAuthor)")
+            Text("by \(review.author)")
                 .font(.system(.title, design: .serif))
                 .italic()
 
@@ -29,7 +30,7 @@ struct RenderView: View {
             }
 
             ScrollView {
-                Text(review.reviewText)
+                Text(review.text)
                     .fontDesign(.serif)
                     .padding(.vertical)
             }
@@ -46,11 +47,17 @@ struct RenderView: View {
     }
 }
 
-struct RenderView_Previews: PreviewProvider {
-    static var previews: some View {
-        let dataController = DataController()
-        let review = Review(context: dataController.container.viewContext)
+#Preview {
+    do {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Review.self, configurations: config)
 
-        RenderView(review: review)
+        let review = Review(title: "Example title", author: "Example author", rating: 4, text: "Example review goes here", date: .now)
+
+        return RenderView(review: review)
+            .modelContainer(container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
     }
 }
+

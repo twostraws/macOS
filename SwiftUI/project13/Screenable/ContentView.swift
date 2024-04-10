@@ -17,9 +17,7 @@ import UniformTypeIdentifiers
     var body: some View {
         HStack(spacing: 20) {
             RenderView(document: document)
-                .onDrag {
-                    NSItemProvider(item: snapshotToURL() as NSSecureCoding, typeIdentifier: UTType.fileURL.identifier)
-                }
+                .draggable(snapshotToURL())
                 .dropDestination(for: URL.self) { items, location in
                     handleDrop(of: items)
                 }
@@ -95,7 +93,7 @@ import UniformTypeIdentifiers
         }
         .padding()
         .toolbar {
-            Button("Export") { export() }
+            Button("Export", action: export)
             ShareLink(item: snapshotToURL())
         }
         .onCommand(#selector(AppCommands.export)) { export() }
@@ -145,8 +143,6 @@ import UniformTypeIdentifiers
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(document: .constant(ScreenableDocument()))
-    }
+#Preview {
+    ContentView(document: .constant(ScreenableDocument()))
 }

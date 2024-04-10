@@ -9,7 +9,12 @@ import MapKit
 import SwiftUI
 
 struct ContentView: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var mapCamera = MapCameraPosition.region(
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
+            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+        )
+    )
 
     @State private var selectedLocations = Set<Location>()
     @State private var locations = [Location]()
@@ -29,22 +34,24 @@ struct ContentView: View {
             }
             .frame(minWidth: 200)
         } detail: {
-            Map(coordinateRegion: $region, annotationItems: locations) { location in
-                MapAnnotation(coordinate: location.coordinate) {
-                    Text(location.name)
-                        .font(.headline)
-                        .padding(5)
-                        .padding(.horizontal, 5)
-                        .background(.black)
-                        .foregroundStyle(.white)
-                        .clipShape(.capsule)
+            Map(position: $mapCamera) {
+                ForEach(locations) { location in
+                    Annotation(location.name, coordinate: location.coordinate) {
+                        Text(location.name)
+                            .font(.headline)
+                            .padding(5)
+                            .padding(.horizontal, 5)
+                            .background(.black)
+                            .foregroundStyle(.white)
+                            .clipShape(.capsule)
+                    }
                 }
             }
             .ignoresSafeArea()
         }
         .searchable(text: $searchText, placement: .sidebar)
         .onSubmit(of: .search, runSearch)
-        .onChange(of: selectedLocations) { _ in
+        .onChange(of: selectedLocations) {
             var visibleMap = MKMapRect.null
 
             for location in selectedLocations {
@@ -58,7 +65,7 @@ struct ContentView: View {
             newRegion.span.longitudeDelta *= 1.5
 
             withAnimation {
-                region = newRegion
+                mapCamera = .region(newRegion)
             }
          }
         .onDeleteCommand {
@@ -69,14 +76,18 @@ struct ContentView: View {
     }
 
     func runSearch() {
-        let searchRequest = MKLocalSearch.Request()
-        searchRequest.naturalLanguageQuery = searchText
-        // Optional: searchRequest.region = region
+        Task {
+            let searchRequest = MKLocalSearch.Request()
+            searchRequest.naturalLanguageQuery = searchText
 
-        let search = MKLocalSearch(request: searchRequest)
+            // The below is optional.
+            // if let region = mapCamera.region {
+            //     searchRequest.region = region
+            // }
 
-        search.start { response, error in
-            guard let response = response else { return }
+            let search = MKLocalSearch(request: searchRequest)
+
+            let response = try await search.start()
             guard let item = response.mapItems.first else { return }
             guard let itemName = item.name, let itemLocation = item.placemark.location else { return }
 
@@ -93,8 +104,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

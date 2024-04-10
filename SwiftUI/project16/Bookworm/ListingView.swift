@@ -5,75 +5,60 @@
 //  Created by Paul Hudson on 21/05/2022.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ListingView: View {
-    @EnvironmentObject var dataController: DataController
-    @Environment(\.managedObjectContext) var managedObjectContext
-
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.id)]) var reviews: FetchedResults<Review>
-    @AppStorage("id") var id = 1
+    @Binding var selectedReview: Review?
+    @Environment(\.modelContext) var modelContext
+    @Query(sort: \Review.date) var reviews: [Review]
 
     var body: some View {
-        List(reviews, selection: $dataController.selectedReview) { review in
-            Text(review.reviewTitle)
+        List(reviews, selection: $selectedReview) { review in
+            Text(review.title)
                 .tag(review)
                 .contextMenu {
                     Button("Delete", role: .destructive, action: deleteSelected)
                 }
         }
         .toolbar {
-            Button(action: addReview) {
-                Label("Add Review", systemImage: "plus")
-            }
+            Button("Add Review", systemImage: "plus", action: addReview)
 
-            Button(action: deleteSelected) {
-                Label("Delete", systemImage: "trash")
-            }
-            .disabled(dataController.selectedReview == nil)
+            Button("Delete", systemImage: "trash", action: deleteSelected)
+                .disabled(selectedReview == nil)
         }
-        .onDeleteCommand(perform: deleteSelected)
     }
 
     func addReview() {
-        let review = Review(context: managedObjectContext)
-        review.id = Int32(id)
-        review.title = "Enter the title"
-        review.author = "Enter the author"
-        review.rating = 3
-
-        id += 1
-
-        dataController.save()
-        dataController.selectedReview = review
+        let review = Review(title: "Enter the title", author: "Enter the author", rating: 3, text: "", date: .now)
+        modelContext.insert(review)
+        selectedReview = review
     }
 
     func deleteSelected() {
-        guard let selectedReview = dataController.selectedReview else {
+        guard let selected = selectedReview else {
             return
         }
 
-        guard let selectedIndex = reviews.firstIndex(of: selectedReview) else {
+        guard let selectedIndex = reviews.firstIndex(of: selected) else {
             return
         }
 
-        managedObjectContext.delete(selectedReview)
-        dataController.save()
+        modelContext.delete(selected)
+        try? modelContext.save()
 
-        if selectedIndex < reviews.count {
-            dataController.selectedReview = reviews[selectedIndex]
+        if selectedIndex < reviews.count - 1 {
+            selectedReview = reviews[selectedIndex]
         } else {
-            let previousIndex = selectedIndex - 1
+            let previousIndex = selectedIndex
 
             if previousIndex >= 0 {
-                dataController.selectedReview = reviews[previousIndex]
+                selectedReview = reviews[previousIndex]
             }
         }
     }
 }
 
-struct ListingView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListingView()
-    }
+#Preview {
+    ListingView(selectedReview: .constant(nil))
 }

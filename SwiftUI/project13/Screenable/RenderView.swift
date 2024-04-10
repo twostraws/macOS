@@ -92,11 +92,9 @@ struct RenderView: View {
     }
 }
 
-struct RenderView_Previews: PreviewProvider {
-    static var previews: some View {
-        var document = ScreenableDocument()
-        document.caption = "Hello, world"
+#Preview {
+    var document = ScreenableDocument()
+    document.caption = "Hello, world"
 
-        return RenderView(document: document)
-    }
+    return RenderView(document: document)
 }

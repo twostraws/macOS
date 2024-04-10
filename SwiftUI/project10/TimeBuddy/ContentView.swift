@@ -20,10 +20,8 @@ struct ContentView: View {
         VStack {
             HStack {
                 Spacer()
-                Button(action: quit) {
-                    Label("Quit", systemImage: "xmark.circle.fill")
-                }
-                .foregroundStyle(.secondary)
+                Button("Quit", systemImage: "xmark.circle.fill", action: quit)
+                    .foregroundStyle(.secondary)
             }
             .buttonStyle(.borderless)
             
@@ -36,13 +34,11 @@ struct ContentView: View {
                         let time = timeData(for: timeZone)
                         
                         HStack {
-                            Button {
+                            Button("Copy", systemImage: "doc.on.doc") {
                                 NSPasteboard.general.clearContents()
                                 NSPasteboard.general.setString(time, forType: .string)
-                            } label: {
-                                Label("Copy", systemImage: "doc.on.doc")
-                                    .labelStyle(.iconOnly)
                             }
+                            .labelStyle(.iconOnly)
                             .buttonStyle(.borderless)
                             
                             Text(time)
@@ -117,8 +113,6 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

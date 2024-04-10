@@ -11,12 +11,10 @@
 		516E74D92838FDC500F26837 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E74D82838FDC500F26837 /* ContentView.swift */; };
 		516E74DB2838FDC600F26837 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516E74DA2838FDC600F26837 /* Assets.xcassets */; };
 		516E74DE2838FDC600F26837 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 516E74DD2838FDC600F26837 /* Preview Assets.xcassets */; };
-		516E74E72838FDD800F26837 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 516E74E52838FDD800F26837 /* Bookworm.xcdatamodeld */; };
-		516E74E92839007E00F26837 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E74E82839007E00F26837 /* DataController.swift */; };
 		516E74EB2839016900F26837 /* ListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E74EA2839016900F26837 /* ListingView.swift */; };
-		516E74ED2839018600F26837 /* Review-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E74EC2839018600F26837 /* Review-CoreDataHelpers.swift */; };
 		516E74EF2839348C00F26837 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E74EE2839348C00F26837 /* DetailView.swift */; };
 		516E74F1283935C500F26837 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E74F0283935C500F26837 /* RenderView.swift */; };
+		51D728CD2BC019E700093A8C /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D728CC2BC019E700093A8C /* Review.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +24,10 @@
 		516E74DA2838FDC600F26837 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		516E74DD2838FDC600F26837 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		516E74DF2838FDC600F26837 /* Bookworm.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bookworm.entitlements; sourceTree = "<group>"; };
-		516E74E62838FDD800F26837 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
-		516E74E82839007E00F26837 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		516E74EA2839016900F26837 /* ListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingView.swift; sourceTree = "<group>"; };
-		516E74EC2839018600F26837 /* Review-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Review-CoreDataHelpers.swift"; path = "Bookworm/Review-CoreDataHelpers.swift"; sourceTree = SOURCE_ROOT; };
 		516E74EE2839348C00F26837 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		516E74F0283935C500F26837 /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		51D728CC2BC019E700093A8C /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +65,7 @@
 				516E74EA2839016900F26837 /* ListingView.swift */,
 				516E74EE2839348C00F26837 /* DetailView.swift */,
 				516E74F0283935C500F26837 /* RenderView.swift */,
-				516E74E82839007E00F26837 /* DataController.swift */,
-				516E74EC2839018600F26837 /* Review-CoreDataHelpers.swift */,
-				516E74E52838FDD800F26837 /* Bookworm.xcdatamodeld */,
+				51D728CC2BC019E700093A8C /* Review.swift */,
 				516E74DA2838FDC600F26837 /* Assets.xcassets */,
 				516E74DF2838FDC600F26837 /* Bookworm.entitlements */,
 				516E74DC2838FDC600F26837 /* Preview Content */,
@@ -115,7 +109,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					516E74D22838FDC500F26837 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -157,12 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				516E74ED2839018600F26837 /* Review-CoreDataHelpers.swift in Sources */,
 				516E74D92838FDC500F26837 /* ContentView.swift in Sources */,
+				51D728CD2BC019E700093A8C /* Review.swift in Sources */,
 				516E74EB2839016900F26837 /* ListingView.swift in Sources */,
 				516E74EF2839348C00F26837 /* DetailView.swift in Sources */,
-				516E74E92839007E00F26837 /* DataController.swift in Sources */,
-				516E74E72838FDD800F26837 /* Bookworm.xcdatamodeld in Sources */,
 				516E74F1283935C500F26837 /* RenderView.swift in Sources */,
 				516E74D72838FDC500F26837 /* BookwormApp.swift in Sources */,
 			);
@@ -175,6 +167,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -208,6 +201,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -222,7 +216,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -236,6 +230,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -269,6 +264,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -277,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -293,6 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bookworm/Bookworm.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -307,7 +304,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Bookworm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -323,6 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bookworm/Bookworm.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -337,7 +335,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Bookworm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,19 +366,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		516E74E52838FDD800F26837 /* Bookworm.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				516E74E62838FDD800F26837 /* Bookworm.xcdatamodel */,
-			);
-			currentVersion = 516E74E62838FDD800F26837 /* Bookworm.xcdatamodel */;
-			path = Bookworm.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 516E74CB2838FDC500F26837 /* Project object */;
 }
