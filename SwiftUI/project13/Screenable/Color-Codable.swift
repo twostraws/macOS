@@ -28,8 +28,8 @@ extension Color: Codable {
         var b: CGFloat = 0
         var a: CGFloat = 0
 
-        let color = NSColor(self)
-        color.getRed(&r, green: &g, blue: &b, alpha: &a)
+        let color = NSColor(self).usingColorSpace(.sRGB)
+        color?.getRed(&r, green: &g, blue: &b, alpha: &a)
 
         return (r, g, b, a)
     }
